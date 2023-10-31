@@ -11,7 +11,12 @@ find_package(catkin REQUIRED COMPONENTS
   roscpp
   rospy
   std_msgs
+  cv_bridge
+  image_transport
+  sensor_msgs
 )
+find_package(OpenCV 4.2.0 REQUIRED) # Replace '4' with your OpenCV version
+
 
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
@@ -210,3 +215,7 @@ target_link_libraries(talker ${catkin_LIBRARIES})
 add_executable(mover src/mover.cpp)
 target_link_libraries(mover ${catkin_LIBRARIES})
 
+add_executable(image_saver src/image_saver.cpp)
+target_link_libraries(image_saver ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
+include_directories(${OpenCV_INCLUDE_DIRS})
+target_link_libraries(image_saver ${OpenCV_LIBRARIES})
