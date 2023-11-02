@@ -1,0 +1,8 @@
+prefix=/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/devel
+
+Name: Warehouse_simulation
+Description: Description of Warehouse_simulation
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

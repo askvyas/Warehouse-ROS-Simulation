@@ -217,5 +217,13 @@ target_link_libraries(mover ${catkin_LIBRARIES})
 
 add_executable(image_saver src/image_saver.cpp)
 target_link_libraries(image_saver ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
+
+
+
+
+add_executable(navigate src/navigate.cpp)
+target_link_libraries(navigate ${catkin_LIBRARIES})
+
+
 include_directories(${OpenCV_INCLUDE_DIRS})
 target_link_libraries(image_saver ${OpenCV_LIBRARIES})

@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC -g  -shared -Wl,-soname,libgmockd.so -o ../lib/libgmockd.so CMakeFiles/gmock.dir/src/gmock-all.cc.o  -Wl,-rpath,/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/gtest/lib ../lib/libgtestd.so -lpthread 

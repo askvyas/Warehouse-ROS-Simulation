@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/devel/setup.sh
