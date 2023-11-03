@@ -6,18 +6,8 @@
 },
 {
   "directory": "/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build",
-  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"Warehouse_simulation\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/opencv4  -g   -o CMakeFiles/mover.dir/src/mover.cpp.o -c /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/src/mover.cpp",
-  "file": "/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/src/mover.cpp"
-},
-{
-  "directory": "/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build",
   "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"Warehouse_simulation\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/opencv4  -g   -o CMakeFiles/navigate.dir/src/navigate.cpp.o -c /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/src/navigate.cpp",
   "file": "/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/src/navigate.cpp"
-},
-{
-  "directory": "/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build",
-  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"Warehouse_simulation\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/opencv4  -g   -o CMakeFiles/talker.dir/src/talker.cpp.o -c /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/src/talker.cpp",
-  "file": "/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/src/talker.cpp"
 },
 {
   "directory": "/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/gtest/googlemock",

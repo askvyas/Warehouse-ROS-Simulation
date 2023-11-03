@@ -54,9 +54,7 @@ CMAKE_BINARY_DIR = /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_s
 
 # The main recursive "all" target.
 all: CMakeFiles/image_saver.dir/all
-all: CMakeFiles/mover.dir/all
 all: CMakeFiles/navigate.dir/all
-all: CMakeFiles/talker.dir/all
 all: gtest/all
 
 .PHONY : all
@@ -75,7 +73,6 @@ clean: CMakeFiles/std_msgs_generate_messages_eus.dir/clean
 clean: CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
 clean: CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
 clean: CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
-clean: CMakeFiles/mover.dir/clean
 clean: CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
 clean: CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
 clean: CMakeFiles/roscpp_generate_messages_eus.dir/clean
@@ -98,7 +95,6 @@ clean: CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
 clean: CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
 clean: CMakeFiles/std_msgs_generate_messages_py.dir/clean
 clean: CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
-clean: CMakeFiles/talker.dir/clean
 clean: CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
 clean: CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
 clean: gtest/clean
@@ -379,33 +375,6 @@ CMakeFiles/sensor_msgs_generate_messages_py.dir/clean:
 .PHONY : CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/mover.dir
-
-# All Build rule for target.
-CMakeFiles/mover.dir/all:
-	$(MAKE) -f CMakeFiles/mover.dir/build.make CMakeFiles/mover.dir/depend
-	$(MAKE) -f CMakeFiles/mover.dir/build.make CMakeFiles/mover.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles --progress-num=11,12 "Built target mover"
-.PHONY : CMakeFiles/mover.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/mover.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/mover.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles 0
-.PHONY : CMakeFiles/mover.dir/rule
-
-# Convenience name for target.
-mover: CMakeFiles/mover.dir/rule
-
-.PHONY : mover
-
-# clean rule for target.
-CMakeFiles/mover.dir/clean:
-	$(MAKE) -f CMakeFiles/mover.dir/build.make CMakeFiles/mover.dir/clean
-.PHONY : CMakeFiles/mover.dir/clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/geometry_msgs_generate_messages_cpp.dir
 
 # All Build rule for target.
@@ -547,7 +516,7 @@ CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean:
 CMakeFiles/navigate.dir/all:
 	$(MAKE) -f CMakeFiles/navigate.dir/build.make CMakeFiles/navigate.dir/depend
 	$(MAKE) -f CMakeFiles/navigate.dir/build.make CMakeFiles/navigate.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles --progress-num=13,14 "Built target navigate"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles --progress-num=11,12 "Built target navigate"
 .PHONY : CMakeFiles/navigate.dir/all
 
 # Build rule for subdir invocation for target.
@@ -998,33 +967,6 @@ sensor_msgs_generate_messages_cpp: CMakeFiles/sensor_msgs_generate_messages_cpp.
 CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean:
 	$(MAKE) -f CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
 .PHONY : CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/talker.dir
-
-# All Build rule for target.
-CMakeFiles/talker.dir/all:
-	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/depend
-	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles --progress-num=15,16 "Built target talker"
-.PHONY : CMakeFiles/talker.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/talker.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/talker.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles 0
-.PHONY : CMakeFiles/talker.dir/rule
-
-# Convenience name for target.
-talker: CMakeFiles/talker.dir/rule
-
-.PHONY : talker
-
-# clean rule for target.
-CMakeFiles/talker.dir/clean:
-	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/clean
-.PHONY : CMakeFiles/talker.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/std_msgs_generate_messages_nodejs.dir

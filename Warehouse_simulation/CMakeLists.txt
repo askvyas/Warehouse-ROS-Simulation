@@ -209,11 +209,13 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
-add_executable(talker src/talker.cpp)
-target_link_libraries(talker ${catkin_LIBRARIES})
+# add_executable(talker src/talker.cpp)
+# target_link_libraries(talker ${catkin_LIBRARIES})
 
-add_executable(mover src/mover.cpp)
-target_link_libraries(mover ${catkin_LIBRARIES})
+# add_executable(mover src/mover.cpp)
+# target_link_libraries(mover ${catkin_LIBRARIES})
+
+
 
 add_executable(image_saver src/image_saver.cpp)
 target_link_libraries(image_saver ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})

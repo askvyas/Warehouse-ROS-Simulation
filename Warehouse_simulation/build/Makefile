@@ -272,19 +272,6 @@ sensor_msgs_generate_messages_py/fast:
 .PHONY : sensor_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named mover
-
-# Build rule for target.
-mover: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 mover
-.PHONY : mover
-
-# fast build rule for target.
-mover/fast:
-	$(MAKE) -f CMakeFiles/mover.dir/build.make CMakeFiles/mover.dir/build
-.PHONY : mover/fast
-
-#=============================================================================
 # Target rules for targets named geometry_msgs_generate_messages_cpp
 
 # Build rule for target.
@@ -571,19 +558,6 @@ sensor_msgs_generate_messages_cpp/fast:
 .PHONY : sensor_msgs_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named talker
-
-# Build rule for target.
-talker: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 talker
-.PHONY : talker
-
-# fast build rule for target.
-talker/fast:
-	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/build
-.PHONY : talker/fast
-
-#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_nodejs
 
 # Build rule for target.
@@ -688,33 +662,6 @@ src/image_saver.cpp.s:
 	$(MAKE) -f CMakeFiles/image_saver.dir/build.make CMakeFiles/image_saver.dir/src/image_saver.cpp.s
 .PHONY : src/image_saver.cpp.s
 
-src/mover.o: src/mover.cpp.o
-
-.PHONY : src/mover.o
-
-# target to build an object file
-src/mover.cpp.o:
-	$(MAKE) -f CMakeFiles/mover.dir/build.make CMakeFiles/mover.dir/src/mover.cpp.o
-.PHONY : src/mover.cpp.o
-
-src/mover.i: src/mover.cpp.i
-
-.PHONY : src/mover.i
-
-# target to preprocess a source file
-src/mover.cpp.i:
-	$(MAKE) -f CMakeFiles/mover.dir/build.make CMakeFiles/mover.dir/src/mover.cpp.i
-.PHONY : src/mover.cpp.i
-
-src/mover.s: src/mover.cpp.s
-
-.PHONY : src/mover.s
-
-# target to generate assembly for a file
-src/mover.cpp.s:
-	$(MAKE) -f CMakeFiles/mover.dir/build.make CMakeFiles/mover.dir/src/mover.cpp.s
-.PHONY : src/mover.cpp.s
-
 src/navigate.o: src/navigate.cpp.o
 
 .PHONY : src/navigate.o
@@ -742,33 +689,6 @@ src/navigate.cpp.s:
 	$(MAKE) -f CMakeFiles/navigate.dir/build.make CMakeFiles/navigate.dir/src/navigate.cpp.s
 .PHONY : src/navigate.cpp.s
 
-src/talker.o: src/talker.cpp.o
-
-.PHONY : src/talker.o
-
-# target to build an object file
-src/talker.cpp.o:
-	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/src/talker.cpp.o
-.PHONY : src/talker.cpp.o
-
-src/talker.i: src/talker.cpp.i
-
-.PHONY : src/talker.i
-
-# target to preprocess a source file
-src/talker.cpp.i:
-	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/src/talker.cpp.i
-.PHONY : src/talker.cpp.i
-
-src/talker.s: src/talker.cpp.s
-
-.PHONY : src/talker.s
-
-# target to generate assembly for a file
-src/talker.cpp.s:
-	$(MAKE) -f CMakeFiles/talker.dir/build.make CMakeFiles/talker.dir/src/talker.cpp.s
-.PHONY : src/talker.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -789,7 +709,6 @@ help:
 	@echo "... geometry_msgs_generate_messages_lisp"
 	@echo "... geometry_msgs_generate_messages_py"
 	@echo "... sensor_msgs_generate_messages_py"
-	@echo "... mover"
 	@echo "... geometry_msgs_generate_messages_cpp"
 	@echo "... geometry_msgs_generate_messages_nodejs"
 	@echo "... rebuild_cache"
@@ -813,7 +732,6 @@ help:
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... sensor_msgs_generate_messages_cpp"
-	@echo "... talker"
 	@echo "... std_msgs_generate_messages_nodejs"
 	@echo "... geometry_msgs_generate_messages_eus"
 	@echo "... gmock_main"
@@ -823,15 +741,9 @@ help:
 	@echo "... src/image_saver.o"
 	@echo "... src/image_saver.i"
 	@echo "... src/image_saver.s"
-	@echo "... src/mover.o"
-	@echo "... src/mover.i"
-	@echo "... src/mover.s"
 	@echo "... src/navigate.o"
 	@echo "... src/navigate.i"
 	@echo "... src/navigate.s"
-	@echo "... src/talker.o"
-	@echo "... src/talker.i"
-	@echo "... src/talker.s"
 .PHONY : help
 
 

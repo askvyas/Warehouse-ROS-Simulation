@@ -12,7 +12,6 @@
 /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles/geometry_msgs_generate_messages_lisp.dir
 /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles/geometry_msgs_generate_messages_py.dir
 /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles/sensor_msgs_generate_messages_py.dir
-/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles/mover.dir
 /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles/geometry_msgs_generate_messages_cpp.dir
 /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir
 /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles/rebuild_cache.dir
@@ -36,7 +35,6 @@
 /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles/std_msgs_generate_messages_cpp.dir
 /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles/std_msgs_generate_messages_py.dir
 /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles/sensor_msgs_generate_messages_cpp.dir
-/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles/talker.dir
 /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles/std_msgs_generate_messages_nodejs.dir
 /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles/geometry_msgs_generate_messages_eus.dir
 /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/gtest/CMakeFiles/install/strip.dir
