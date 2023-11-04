@@ -8,3 +8,12 @@
 # 2.
 # 3.
 # 4.
+
+
+
+#   <include file="$(find husky_gazebo)/launch/spawn_husky.launch">
+#     <arg name="x" value="1.8"/>
+#     <arg name="y" value="9.3"/>
+#     <arg name="z" value="0.25"/>
+#     <arg name="yaw" value="-1.6"/>
+

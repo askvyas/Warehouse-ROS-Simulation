@@ -27,12 +27,12 @@ void move_towards_goal(double robot_x, double robot_y) {
         double angle_to_goal = std::atan2(goal_y_ - robot_y, goal_x_ - robot_x);
         double distance_to_goal = std::hypot(goal_x_ - robot_x, goal_y_ - robot_y);
         double angle_difference = angle_to_goal; 
-        vel_msg.angular.z = 0.8 * angle_difference;
+        vel_msg.angular.z = 1 * angle_difference;
 
-        if (std::fabs(angle_difference) < 0.1) { // tolerance for angular error in radians
-            vel_msg.linear.x = std::min(distance_to_goal, 0.5);
+        if (std::fabs(angle_difference) < 0.1) { 
+            vel_msg.linear.x = std::min(distance_to_goal, 0.7);
         } else {
-            vel_msg.linear.x = 0; // stop to turn
+            vel_msg.linear.x = 0; 
         }
 
         if (distance_to_goal < 0.1) { 
@@ -68,8 +68,8 @@ int main(int argc, char **argv) {
     ros::init(argc, argv, "simple_navigation");
 
     // Set your desired goal position here
-    float goal_x = 0.44073126593994466;
-    float goal_y = 0.4399557342400261;
+    float goal_x = 5.8;
+    float goal_y = 9.3;
     SimpleNavigation navigator(goal_x, goal_y);
     navigator.run();
 
