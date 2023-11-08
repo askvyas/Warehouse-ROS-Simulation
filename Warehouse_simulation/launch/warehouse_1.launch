@@ -20,5 +20,11 @@
 
   </include>
 
+   <param name="base_local_planner" value="local_planner/LocalPlanner" />
+
+
+
+
+
 </launch>
 
