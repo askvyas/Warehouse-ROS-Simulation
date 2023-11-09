@@ -229,3 +229,8 @@ target_link_libraries(navigate ${catkin_LIBRARIES})
 
 include_directories(${OpenCV_INCLUDE_DIRS})
 target_link_libraries(image_saver ${OpenCV_LIBRARIES})
+
+
+add_executable(move_around src/move_around.cpp)
+target_link_libraries(move_around ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
+
