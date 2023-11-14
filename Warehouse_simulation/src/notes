@@ -20,3 +20,6 @@
 #     <arg name="z" value="0.25"/>
 #     <arg name="yaw" value="-1.6"/>
 
+
+
+# Robto moves at Random, basically starts at the staring point and records a video and takes pictures of the same 

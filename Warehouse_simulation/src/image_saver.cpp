@@ -12,6 +12,7 @@ void imageCallback(const sensor_msgs::ImageConstPtr& msg) {
         cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
         
         static int image_count = 0;
+        
         std::stringstream ss;
         /*Save the images in the image_folder and name it with the count */
         ss << "/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/image_folder/image_" << image_count++ << ".jpg";

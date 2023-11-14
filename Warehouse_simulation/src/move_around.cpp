@@ -18,6 +18,7 @@ private:
     image_transport::Subscriber image_sub_;
 
     cv::VideoWriter video_writer_;
+    cv::VideoCapture video_capture_;
     bool is_video_initialized_ = false;
     int frame_width_;
     int frame_height_;
@@ -26,9 +27,9 @@ private:
 
     void check_directory(const std::string& dir) {
         struct stat buffer;
-        if(stat(dir.c_str(), &buffer) != 0) { // Directory does not exist
+        if(stat(dir.c_str(), &buffer) != 0) { 
             ROS_INFO("Creating video directory: %s", dir.c_str());
-            mkdir(dir.c_str(), 0777); // Create directory with full access permissions
+            mkdir(dir.c_str(), 0777); 
         }
     }
 
