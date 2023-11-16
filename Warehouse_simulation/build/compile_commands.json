@@ -1,6 +1,11 @@
 [
 {
   "directory": "/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build",
+  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"Warehouse_simulation\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/opencv4  -g   -o CMakeFiles/move_around.dir/src/move_around.cpp.o -c /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/src/move_around.cpp",
+  "file": "/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/src/move_around.cpp"
+},
+{
+  "directory": "/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build",
   "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"Warehouse_simulation\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/opencv4  -g   -o CMakeFiles/image_saver.dir/src/image_saver.cpp.o -c /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/src/image_saver.cpp",
   "file": "/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/src/image_saver.cpp"
 },
@@ -8,6 +13,11 @@
   "directory": "/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build",
   "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"Warehouse_simulation\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/usr/include/opencv4  -g   -o CMakeFiles/navigate.dir/src/navigate.cpp.o -c /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/src/navigate.cpp",
   "file": "/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/src/navigate.cpp"
+},
+{
+  "directory": "/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build",
+  "command": "/usr/bin/c++  -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\\\"Warehouse_simulation\\\" -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -isystem /usr/include/opencv4  -g   -o CMakeFiles/watch_warehouse.dir/src/watch_warehouse.cpp.o -c /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/src/watch_warehouse.cpp",
+  "file": "/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/src/watch_warehouse.cpp"
 },
 {
   "directory": "/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/gtest/googlemock",

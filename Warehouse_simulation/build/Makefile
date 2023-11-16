@@ -168,6 +168,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named move_around
+
+# Build rule for target.
+move_around: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 move_around
+.PHONY : move_around
+
+# fast build rule for target.
+move_around/fast:
+	$(MAKE) -f CMakeFiles/move_around.dir/build.make CMakeFiles/move_around.dir/build
+.PHONY : move_around/fast
+
+#=============================================================================
 # Target rules for targets named image_saver
 
 # Build rule for target.
@@ -454,6 +467,19 @@ run_tests/fast:
 .PHONY : run_tests/fast
 
 #=============================================================================
+# Target rules for targets named watch_warehouse
+
+# Build rule for target.
+watch_warehouse: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 watch_warehouse
+.PHONY : watch_warehouse
+
+# fast build rule for target.
+watch_warehouse/fast:
+	$(MAKE) -f CMakeFiles/watch_warehouse.dir/build.make CMakeFiles/watch_warehouse.dir/build
+.PHONY : watch_warehouse/fast
+
+#=============================================================================
 # Target rules for targets named std_msgs_generate_messages_lisp
 
 # Build rule for target.
@@ -662,6 +688,33 @@ src/image_saver.cpp.s:
 	$(MAKE) -f CMakeFiles/image_saver.dir/build.make CMakeFiles/image_saver.dir/src/image_saver.cpp.s
 .PHONY : src/image_saver.cpp.s
 
+src/move_around.o: src/move_around.cpp.o
+
+.PHONY : src/move_around.o
+
+# target to build an object file
+src/move_around.cpp.o:
+	$(MAKE) -f CMakeFiles/move_around.dir/build.make CMakeFiles/move_around.dir/src/move_around.cpp.o
+.PHONY : src/move_around.cpp.o
+
+src/move_around.i: src/move_around.cpp.i
+
+.PHONY : src/move_around.i
+
+# target to preprocess a source file
+src/move_around.cpp.i:
+	$(MAKE) -f CMakeFiles/move_around.dir/build.make CMakeFiles/move_around.dir/src/move_around.cpp.i
+.PHONY : src/move_around.cpp.i
+
+src/move_around.s: src/move_around.cpp.s
+
+.PHONY : src/move_around.s
+
+# target to generate assembly for a file
+src/move_around.cpp.s:
+	$(MAKE) -f CMakeFiles/move_around.dir/build.make CMakeFiles/move_around.dir/src/move_around.cpp.s
+.PHONY : src/move_around.cpp.s
+
 src/navigate.o: src/navigate.cpp.o
 
 .PHONY : src/navigate.o
@@ -689,6 +742,33 @@ src/navigate.cpp.s:
 	$(MAKE) -f CMakeFiles/navigate.dir/build.make CMakeFiles/navigate.dir/src/navigate.cpp.s
 .PHONY : src/navigate.cpp.s
 
+src/watch_warehouse.o: src/watch_warehouse.cpp.o
+
+.PHONY : src/watch_warehouse.o
+
+# target to build an object file
+src/watch_warehouse.cpp.o:
+	$(MAKE) -f CMakeFiles/watch_warehouse.dir/build.make CMakeFiles/watch_warehouse.dir/src/watch_warehouse.cpp.o
+.PHONY : src/watch_warehouse.cpp.o
+
+src/watch_warehouse.i: src/watch_warehouse.cpp.i
+
+.PHONY : src/watch_warehouse.i
+
+# target to preprocess a source file
+src/watch_warehouse.cpp.i:
+	$(MAKE) -f CMakeFiles/watch_warehouse.dir/build.make CMakeFiles/watch_warehouse.dir/src/watch_warehouse.cpp.i
+.PHONY : src/watch_warehouse.cpp.i
+
+src/watch_warehouse.s: src/watch_warehouse.cpp.s
+
+.PHONY : src/watch_warehouse.s
+
+# target to generate assembly for a file
+src/watch_warehouse.cpp.s:
+	$(MAKE) -f CMakeFiles/watch_warehouse.dir/build.make CMakeFiles/watch_warehouse.dir/src/watch_warehouse.cpp.s
+.PHONY : src/watch_warehouse.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -699,6 +779,7 @@ help:
 	@echo "... install"
 	@echo "... list_install_components"
 	@echo "... edit_cache"
+	@echo "... move_around"
 	@echo "... image_saver"
 	@echo "... install/local"
 	@echo "... rosgraph_msgs_generate_messages_eus"
@@ -724,6 +805,7 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... download_extra_data"
 	@echo "... run_tests"
+	@echo "... watch_warehouse"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... clean_test_results"
@@ -741,9 +823,15 @@ help:
 	@echo "... src/image_saver.o"
 	@echo "... src/image_saver.i"
 	@echo "... src/image_saver.s"
+	@echo "... src/move_around.o"
+	@echo "... src/move_around.i"
+	@echo "... src/move_around.s"
 	@echo "... src/navigate.o"
 	@echo "... src/navigate.i"
 	@echo "... src/navigate.s"
+	@echo "... src/watch_warehouse.o"
+	@echo "... src/watch_warehouse.i"
+	@echo "... src/watch_warehouse.s"
 .PHONY : help
 
 

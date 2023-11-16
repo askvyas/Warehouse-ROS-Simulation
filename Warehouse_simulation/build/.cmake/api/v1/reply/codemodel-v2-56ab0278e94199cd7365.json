@@ -50,7 +50,9 @@
 						32,
 						33,
 						34,
-						35
+						35,
+						36,
+						37
 					]
 				},
 				{
@@ -148,7 +150,9 @@
 						32,
 						33,
 						34,
-						35
+						35,
+						36,
+						37
 					]
 				},
 				{
@@ -285,6 +289,13 @@
 					"id" : "image_saver::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-image_saver-Debug-0979d867ca4e48faf686.json",
 					"name" : "image_saver",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "move_around::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-move_around-Debug-50a243aea242affbd605.json",
+					"name" : "move_around",
 					"projectIndex" : 0
 				},
 				{
@@ -446,6 +457,13 @@
 					"id" : "tests::@6890427a1f51a3e7e1df",
 					"jsonFile" : "target-tests-Debug-8210aed86a390c0f40c3.json",
 					"name" : "tests",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "watch_warehouse::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-watch_warehouse-Debug-5bdc5f641fb5cb64a729.json",
+					"name" : "watch_warehouse",
 					"projectIndex" : 0
 				}
 			]

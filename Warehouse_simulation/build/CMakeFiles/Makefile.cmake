@@ -213,6 +213,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/move_around.dir/DependInfo.cmake"
   "CMakeFiles/image_saver.dir/DependInfo.cmake"
   "CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/DependInfo.cmake"
   "CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/DependInfo.cmake"
@@ -235,6 +236,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/DependInfo.cmake"
   "CMakeFiles/download_extra_data.dir/DependInfo.cmake"
   "CMakeFiles/run_tests.dir/DependInfo.cmake"
+  "CMakeFiles/watch_warehouse.dir/DependInfo.cmake"
   "CMakeFiles/std_msgs_generate_messages_lisp.dir/DependInfo.cmake"
   "CMakeFiles/roscpp_generate_messages_lisp.dir/DependInfo.cmake"
   "CMakeFiles/clean_test_results.dir/DependInfo.cmake"

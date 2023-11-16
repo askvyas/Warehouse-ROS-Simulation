@@ -53,8 +53,10 @@ CMAKE_BINARY_DIR = /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_s
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/move_around.dir/all
 all: CMakeFiles/image_saver.dir/all
 all: CMakeFiles/navigate.dir/all
+all: CMakeFiles/watch_warehouse.dir/all
 all: gtest/all
 
 .PHONY : all
@@ -65,6 +67,7 @@ preinstall: gtest/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/move_around.dir/clean
 clean: CMakeFiles/image_saver.dir/clean
 clean: CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
 clean: CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
@@ -87,6 +90,7 @@ clean: CMakeFiles/doxygen.dir/clean
 clean: CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
 clean: CMakeFiles/download_extra_data.dir/clean
 clean: CMakeFiles/run_tests.dir/clean
+clean: CMakeFiles/watch_warehouse.dir/clean
 clean: CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 clean: CMakeFiles/roscpp_generate_messages_lisp.dir/clean
 clean: CMakeFiles/clean_test_results.dir/clean
@@ -157,6 +161,33 @@ gtest/googletest/clean: gtest/googletest/CMakeFiles/gtest_main.dir/clean
 gtest/googletest/clean: gtest/googletest/CMakeFiles/gtest.dir/clean
 
 .PHONY : gtest/googletest/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/move_around.dir
+
+# All Build rule for target.
+CMakeFiles/move_around.dir/all:
+	$(MAKE) -f CMakeFiles/move_around.dir/build.make CMakeFiles/move_around.dir/depend
+	$(MAKE) -f CMakeFiles/move_around.dir/build.make CMakeFiles/move_around.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles --progress-num=11,12 "Built target move_around"
+.PHONY : CMakeFiles/move_around.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/move_around.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/move_around.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles 0
+.PHONY : CMakeFiles/move_around.dir/rule
+
+# Convenience name for target.
+move_around: CMakeFiles/move_around.dir/rule
+
+.PHONY : move_around
+
+# clean rule for target.
+CMakeFiles/move_around.dir/clean:
+	$(MAKE) -f CMakeFiles/move_around.dir/build.make CMakeFiles/move_around.dir/clean
+.PHONY : CMakeFiles/move_around.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/image_saver.dir
@@ -516,7 +547,7 @@ CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean:
 CMakeFiles/navigate.dir/all:
 	$(MAKE) -f CMakeFiles/navigate.dir/build.make CMakeFiles/navigate.dir/depend
 	$(MAKE) -f CMakeFiles/navigate.dir/build.make CMakeFiles/navigate.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles --progress-num=11,12 "Built target navigate"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles --progress-num=13,14 "Built target navigate"
 .PHONY : CMakeFiles/navigate.dir/all
 
 # Build rule for subdir invocation for target.
@@ -751,6 +782,33 @@ run_tests: CMakeFiles/run_tests.dir/rule
 CMakeFiles/run_tests.dir/clean:
 	$(MAKE) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/clean
 .PHONY : CMakeFiles/run_tests.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/watch_warehouse.dir
+
+# All Build rule for target.
+CMakeFiles/watch_warehouse.dir/all:
+	$(MAKE) -f CMakeFiles/watch_warehouse.dir/build.make CMakeFiles/watch_warehouse.dir/depend
+	$(MAKE) -f CMakeFiles/watch_warehouse.dir/build.make CMakeFiles/watch_warehouse.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles --progress-num=15,16 "Built target watch_warehouse"
+.PHONY : CMakeFiles/watch_warehouse.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/watch_warehouse.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/watch_warehouse.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/CMakeFiles 0
+.PHONY : CMakeFiles/watch_warehouse.dir/rule
+
+# Convenience name for target.
+watch_warehouse: CMakeFiles/watch_warehouse.dir/rule
+
+.PHONY : watch_warehouse
+
+# clean rule for target.
+CMakeFiles/watch_warehouse.dir/clean:
+	$(MAKE) -f CMakeFiles/watch_warehouse.dir/build.make CMakeFiles/watch_warehouse.dir/clean
+.PHONY : CMakeFiles/watch_warehouse.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/std_msgs_generate_messages_lisp.dir
