@@ -14,6 +14,7 @@ void odom_callback(const nav_msgs::Odometry::ConstPtr& msg)
   ROS_INFO("Husky Pose - x: [%f], y: [%f], z: [%f]", x, y, z);
 
 }
+void scan_callback()
 int main(int argc, char **argv)
 {
   ros::init(argc, argv, "mover");
@@ -23,8 +24,9 @@ int main(int argc, char **argv)
   ros::Publisher vel_pub = n.advertise<geometry_msgs::Twist>("/husky_velocity_controller/cmd_vel", 10);
   ros::Publisher chatter_pub = n.advertise<std_msgs::String>("chatter", 1000);
 
-  /*Subscriber to get odometry data for husky in Ware house*/
   ros::Subscriber pose_sub=n.subscribe("/husky_velocity_controller/odom",100,odom_callback);
+  ros::Subscriber scn_sub=n.subscribe("/scan",100,scan_callback);
+
   ros::Rate loop_rate(10);
   int count = 0;
   while (ros::ok())

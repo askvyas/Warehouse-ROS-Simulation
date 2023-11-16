@@ -13,8 +13,9 @@ private:
     void image_callback(const sensor_msgs::ImageConstPtr& msg) {
         try {
             cv_bridge::CvImagePtr cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
-            cv::imshow("Frame", cv_ptr->image);
-            cv::waitKey(30); // Wait for a brief period to display the frame
+            cv::imshow("Watcher", cv_ptr->image);
+            cv::waitKey(40); 
+            // Updated waitkey as the video is going too fast
         } catch (cv_bridge::Exception& e) {
             ROS_ERROR("Exception in image_callback: %s", e.what());
         }
@@ -25,11 +26,11 @@ public:
         : n_() {
         image_transport::ImageTransport it(n_);
         image_sub_ = it.subscribe("/camera/image_raw", 1, &Watcher::image_callback, this);
-        cv::namedWindow("Frame", cv::WINDOW_AUTOSIZE); // Create a window for display.
+        cv::namedWindow("Watcher", cv::WINDOW_AUTOSIZE); 
     }
 
     ~Watcher() {
-        cv::destroyWindow("Frame"); // Destroy the OpenCV window
+        cv::destroyWindow("Watcher"); 
     }
 
     void run() {
