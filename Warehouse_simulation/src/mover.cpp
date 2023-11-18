@@ -14,7 +14,7 @@ void odom_callback(const nav_msgs::Odometry::ConstPtr& msg)
   ROS_INFO("Husky Pose - x: [%f], y: [%f], z: [%f]", x, y, z);
 
 }
-void scan_callback()
+// void scan_callback()
 int main(int argc, char **argv)
 {
   ros::init(argc, argv, "mover");

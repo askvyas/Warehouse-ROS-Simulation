@@ -508,7 +508,7 @@ xmlrpcpp_DIR:PATH=/opt/ros/noetic/share/xmlrpcpp/cmake
 ########################
 
 //catkin environment
-CATKIN_ENV:INTERNAL=/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/catkin_generated/env_cached.sh
+CATKIN_ENV:INTERNAL=
 CATKIN_TEST_RESULTS_DIR:INTERNAL=/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/build/test_results
 //ADVANCED property for variable: CMAKE_ADDR2LINE
 CMAKE_ADDR2LINE-ADVANCED:INTERNAL=1
