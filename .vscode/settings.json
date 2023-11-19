@@ -1,3 +1,11 @@
 {
-    "cmake.sourceDirectory": "/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation"
+    "cmake.sourceDirectory": "/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation",
+    "files.associations": {
+        "array": "cpp",
+        "bitset": "cpp",
+        "string_view": "cpp",
+        "initializer_list": "cpp",
+        "utility": "cpp",
+        "unordered_map": "cpp"
+    }
 }
