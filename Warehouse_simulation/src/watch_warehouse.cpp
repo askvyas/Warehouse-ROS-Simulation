@@ -10,6 +10,11 @@
 #include <sstream>
 #include <sys/stat.h>
 
+// date time related
+#include <chrono>
+#include <iomanip>
+
+
 
 class Watcher {
 private:
@@ -59,8 +64,18 @@ private:
 }
 
 public:
+// code modification to update video file name everytime its ran
      Watcher()
-        : n_(), frame_rate_(30.0), video_path_("/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/video_folder/robot_video.avi") {
+        : n_(), frame_rate_(30.0){
+        auto now = std::chrono::system_clock::now();
+        auto in_time_t = std::chrono::system_clock::to_time_t(now);
+
+        std::stringstream ss;
+        ss << std::put_time(std::localtime(&in_time_t), "%Y-%m-%d_%H-%M-%S");
+        std::string time_str = ss.str();
+
+        video_path_ = "/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/video_folder/robot_video_" + time_str + ".avi";
+
 
         check_directory("/home/vyas/catkin_ws/src/Warehouse-ROS-Simulation/Warehouse_simulation/video_folder");
 
