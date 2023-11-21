@@ -1,0 +1,10 @@
+<launch>
+    <!-- Gmapping node -->
+    <node name="gmapping" pkg="gmapping" type="slam_gmapping" respawn="false" output="screen">
+        <param name="base_frame" value="base_link"/> <!-- Adjust this to your robot's base frame -->
+        <param name="odom_frame" value="odom"/> <!-- Adjust this to your robot's odometry frame -->
+    </node>
+
+    <!-- Visualization with RViz (optional) -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find Warehouse_simulation)/config/mapping.rviz" required="true"/>
+</launch>

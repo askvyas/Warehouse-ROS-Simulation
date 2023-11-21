@@ -12,6 +12,7 @@ private:
     ros::Publisher vel_pub_;
     ros::Subscriber pose_sub_;
     ros::Subscriber scan_sub_;
+    float safe_thresh=4.5;
 
     std::vector<float> selectArea(const std::vector<float>& arr,int s,int id)
     {
@@ -72,22 +73,35 @@ private:
     std::vector<float> rc=selectArea(scan_msg->ranges,720,2);
     std::vector<float> rr=selectArea(scan_msg->ranges,720,3);
     umap["ll"]=average(ll);
-    umap["lc"]=average(ll);
-    umap["rc"]=average(ll);
-    umap["rr"]=average(ll);
+    umap["lc"]=average(lc);
+    umap["rc"]=average(rc);
+    umap["rr"]=average(rr);
     std::string dir="";
 
 
-    float m=std::max({umap["ll"],umap["lc"],umap["rc"],umap["rr"]});
+    float max_r=std::max({umap["ll"],umap["lc"],umap["rc"],umap["rr"]});
+    float min_r=std::min({umap["ll"],umap["lc"],umap["rc"],umap["rr"]});
 
+
+    bool foundMax = false;
     for (const auto& x : umap) {
-        if (x.second == m) {
-            dir += x.first;
+        if (x.second == max_r && !foundMax) {
+            dir = x.first;
+            foundMax = true;
         }
     }
-        ROS_INFO("Max range: %f", m);
-    ROS_INFO("Direction: %s", dir);
+    
 
+    
+        ROS_INFO("Max range: %f", max_r);
+    ROS_INFO("Direction: %s", dir.c_str());
+    // if(min_r<1)
+    // {
+    //     move(-1);
+
+    // // }
+    // else
+    // {
 
     if(dir=="ll")
     {
@@ -107,8 +121,9 @@ private:
     }
     else
     {
-        move(-1);
+        move(4);
     }
+    // }
 
     
 
@@ -123,6 +138,11 @@ private:
         geometry_msgs::Twist vel_msg;
 
         vel_msg.linear.x = 0.7;
+        if(d==-1)
+        {
+        vel_msg.linear.x = -0.7;
+        vel_msg.angular.z = 0;
+        }
 
         if(d==0)
         {
@@ -144,7 +164,7 @@ private:
         vel_msg.angular.z = 0.25;
 
         }
-        if(d==-1)
+        if(d==4)
         {
             vel_msg.linear.x = 0.7;
 
