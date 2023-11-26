@@ -1,0 +1,6 @@
+<!-- Finds move_base launch file from husky_navigation stack and start -->
+<launch>
+    <include file="$(find husky_navigation)/launch/move_base.launch">
+        <!-- Customize move_base parameters here -->
+    </include>
+</launch>

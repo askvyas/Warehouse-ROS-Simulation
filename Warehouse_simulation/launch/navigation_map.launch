@@ -1,0 +1,14 @@
+<!-- Launch file for navigation using gmapping and inbuilt localization and planning  -->
+<launch>
+    <include file="$(find Warehouse_simulation)/launch/warehouse_1.launch"/>
+
+    <arg name="map_file" default="$(find Warehouse_simulation)/world/warehouse_map.yaml"/>
+    
+    <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)" />
+
+    <!-- <include file="$(find Warehouse_simulation)/launch/map_env.launch"/> -->
+    <include file="$(find Warehouse_simulation)/launch/amcl.launch"/>
+    <include file="$(find Warehouse_simulation)/launch/move_base.launch"/>
+
+
+</launch>

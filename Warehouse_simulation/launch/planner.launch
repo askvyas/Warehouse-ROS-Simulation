@@ -1,0 +1,4 @@
+<!-- move_around.launch -->
+<launch>
+    <node pkg="Warehouse_simulation" type="planner" name="planner" output="screen"/>
+</launch>

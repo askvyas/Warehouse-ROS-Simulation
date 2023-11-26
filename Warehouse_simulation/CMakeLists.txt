@@ -14,6 +14,9 @@ find_package(catkin REQUIRED COMPONENTS
   cv_bridge
   image_transport
   sensor_msgs
+  actionlib
+  move_base_msgs
+
 )
 find_package(OpenCV 4.2.0 REQUIRED) # Replace '4' with your OpenCV version
 
@@ -237,3 +240,7 @@ target_link_libraries(move_around ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
 
 add_executable(watch_warehouse src/watch_warehouse.cpp)
 target_link_libraries(watch_warehouse ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
+
+
+add_executable(planner src/planner.cpp)
+target_link_libraries(planner ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})

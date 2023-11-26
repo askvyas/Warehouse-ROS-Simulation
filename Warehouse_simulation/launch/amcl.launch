@@ -1,0 +1,5 @@
+<!-- Adaptive mote carlo localization from husky_navigation stack -->
+<launch>
+    <include file="$(find husky_navigation)/launch/amcl.launch">
+    </include>
+</launch>
