@@ -27,8 +27,8 @@ private:
         int frame_height_;
         double frame_rate_;
         std::string video_path_;
-
-            void check_directory(const std::string& dir) {
+    //check if dir exists
+        void check_directory(const std::string& dir) {
         struct stat buffer;
         if(stat(dir.c_str(), &buffer) != 0) { 
             ROS_INFO("Creating video directory: %s", dir.c_str());
@@ -37,7 +37,7 @@ private:
     }
 
 
-
+    // image callback opens video_writer and saves using opencv
     void image_callback(const sensor_msgs::ImageConstPtr& msg) {
     try {
         cv_bridge::CvImagePtr cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
@@ -51,7 +51,7 @@ private:
             video_writer_.open(video_path_, cv::VideoWriter::fourcc('M','J','P','G'), frame_rate_, cv::Size(frame_width_, frame_height_), true);
 
             if (!video_writer_.isOpened()) {
-                ROS_ERROR("Failed to open video for writing");
+                ROS_ERROR("Failed to open video ");
                 return;
             }
             is_video_initialized_ = true;
