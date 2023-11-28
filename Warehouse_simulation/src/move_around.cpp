@@ -17,30 +17,30 @@ private:
     std::vector<float> selectArea(const std::vector<float> &arr, int s, int id)
     {
         std::vector<float> points;
-        int i = 0;
-        int x = 0;
+        int start_angle = 0;
+        int end_angle = 0;
         if (id == 0)
         {
-            i = 0;
-            x = 180;
+            start_angle = 0;
+            end_angle = 180;
         }
         else if (id == 1)
         {
-            i = 180;
-            x = 360;
+            start_angle = 180;
+            end_angle = 360;
         }
         else if (id == 2)
         {
-            i = 360;
-            x = 540;
+            start_angle = 360;
+            end_angle = 540;
         }
         else if (id == 3)
         {
-            i = 540;
-            x = 719;
+            start_angle = 540;
+            end_angle = 719;
         }
 
-        for (i; i < x; i++)
+        for (int i=start_angle; i < end_angle; i++)
         {
             points.push_back(arr[i]);
         }
@@ -74,7 +74,8 @@ private:
 
         float max_r = std::max({umap["ll"], umap["lc"], umap["rc"], umap["rr"]});
         float min_r = std::min({umap["ll"], umap["lc"], umap["rc"], umap["rr"]});
-
+        // 3.5 saftery threshold : robot stopping quite early before the obstacle is detected
+        float saftey_t=1.25;
         bool foundMax = false;
         for (const auto &x : umap)
         {
@@ -87,13 +88,15 @@ private:
 
         ROS_INFO("Max range: %f", max_r);
         ROS_INFO("Direction: %s", dir.c_str());
-        // if(min_r<1)
-        // {
-        //     move(-1);
 
-        // // }
-        // else
-        // {
+
+        if(min_r<saftey_t)
+        {
+            move(-1);
+
+        }
+        else
+        {
 
         if (dir == "ll")
         {
@@ -115,7 +118,7 @@ private:
         {
             move(4);
         }
-        // }
+        }
     }
 
     void move(int d)
@@ -126,10 +129,10 @@ private:
         if (d == -1)
         {
             vel_msg.linear.x = -0.7;
-            vel_msg.angular.z = 0;
+            vel_msg.angular.z = 0.25;
         }
 
-        if (d == 0)
+        else if (d == 0)
         {
             vel_msg.angular.z = -0.5;
         }
@@ -145,7 +148,7 @@ private:
         {
             vel_msg.angular.z = 0.25;
         }
-        if (d == 4)
+        else
         {
             vel_msg.linear.x = 0.7;
         }

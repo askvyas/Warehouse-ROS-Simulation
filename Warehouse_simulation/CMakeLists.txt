@@ -226,8 +226,8 @@ target_link_libraries(image_saver ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
 
 
 
-add_executable(navigate src/navigate.cpp)
-target_link_libraries(navigate ${catkin_LIBRARIES})
+# add_executable(navigate src/navigate.cpp)
+# target_link_libraries(navigate ${catkin_LIBRARIES})
 
 
 include_directories(${OpenCV_INCLUDE_DIRS})
@@ -242,5 +242,5 @@ add_executable(watch_warehouse src/watch_warehouse.cpp)
 target_link_libraries(watch_warehouse ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
 
 
-add_executable(planner src/planner.cpp)
-target_link_libraries(planner ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
+add_executable(navigator src/navigator.cpp)
+target_link_libraries(navigator ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
