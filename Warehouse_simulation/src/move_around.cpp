@@ -14,38 +14,21 @@ private:
     ros::Subscriber scan_sub_;
     float safe_thresh = 4.5;
 
-    std::vector<float> selectArea(const std::vector<float> &arr, int s, int id)
-    {
-        std::vector<float> points;
-        int start_angle = 0;
-        int end_angle = 0;
-        if (id == 0)
-        {
-            start_angle = 0;
-            end_angle = 180;
-        }
-        else if (id == 1)
-        {
-            start_angle = 180;
-            end_angle = 360;
-        }
-        else if (id == 2)
-        {
-            start_angle = 360;
-            end_angle = 540;
-        }
-        else if (id == 3)
-        {
-            start_angle = 540;
-            end_angle = 719;
-        }
+std::vector<float> selectArea(const std::vector<float> &arr, int start_angle, int end_angle)
+{
+    std::vector<float> points;
 
-        for (int i=start_angle; i < end_angle; i++)
-        {
-            points.push_back(arr[i]);
-        }
-        return points;
+    start_angle = std::max(0, start_angle);
+    end_angle = std::min((int)arr.size(), end_angle);
+
+    for (int i = start_angle; i < end_angle; i++)
+    {
+        points.push_back(arr[i]);
     }
+    return points;
+}
+
+    
     float average(std::vector<float> const &v)
     {
         if (v.empty())
@@ -62,14 +45,15 @@ private:
     {
 
         std::unordered_map<std::string, float> umap;
-        std::vector<float> ll = selectArea(scan_msg->ranges, 720, 0);
-        std::vector<float> lc = selectArea(scan_msg->ranges, 720, 1);
-        std::vector<float> rc = selectArea(scan_msg->ranges, 720, 2);
-        std::vector<float> rr = selectArea(scan_msg->ranges, 720, 3);
-        umap["ll"] = average(ll);
-        umap["lc"] = average(lc);
-        umap["rc"] = average(rc);
-        umap["rr"] = average(rr);
+        std::vector<float> front = selectArea(scan_msg->ranges, 180, 360);
+        std::vector<float> right = selectArea(scan_msg->ranges, 360, 540);
+        std::vector<float> left = selectArea(scan_msg->ranges, 0, 180);
+        std::vector<float> rear = selectArea(scan_msg->ranges, 540, 720);
+
+        umap["ll"] = average(front);
+        umap["lc"] = average(right);
+        umap["rc"] = average(left);
+        umap["rr"] = average(rear);
         std::string dir = "";
 
         float max_r = std::max({umap["ll"], umap["lc"], umap["rc"], umap["rr"]});
