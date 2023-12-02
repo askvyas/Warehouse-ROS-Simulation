@@ -18,16 +18,6 @@ https://wiki.ros.org/ROS/Tutorials/InstallingandConfiguringROSEnvironment
 If you install ROS Full desktop version, Gazebo and Husky will be installed to
 ```bash
 # Clone the repository
-$ git clone https://github.com/askvyas/test_case_gen.git
-
-```
-
-
-
-
-### Cloning the Repository
-```bash
-# Clone the repository
-$ git clone https://github.com/askvyas/test_case_gen.git
+$ git clone https://github.com/askvyas/Warehouse-ROS-Simulation.git
 
 ```
