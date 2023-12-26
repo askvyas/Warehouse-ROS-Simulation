@@ -3,3 +3,5 @@ Warehouse_simulation/image_folder/
 Warehouse_simulation/video_folder/
 
 Warehouse_simulation/build
+
+*.onnx

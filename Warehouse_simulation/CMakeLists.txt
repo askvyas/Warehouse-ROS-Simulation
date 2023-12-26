@@ -220,10 +220,9 @@ include_directories(
 
 
 
+
 add_executable(image_saver src/image_saver.cpp)
 target_link_libraries(image_saver ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
-
-
 
 
 # add_executable(navigate src/navigate.cpp)
@@ -232,6 +231,7 @@ target_link_libraries(image_saver ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
 
 include_directories(${OpenCV_INCLUDE_DIRS})
 target_link_libraries(image_saver ${OpenCV_LIBRARIES})
+
 
 
 add_executable(move_around src/move_around.cpp)
@@ -244,3 +244,9 @@ target_link_libraries(watch_warehouse ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
 
 add_executable(navigator src/navigator.cpp)
 target_link_libraries(navigator ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
+
+
+#object detection
+add_executable(object_detection src/object_detection.cpp)
+target_link_libraries(object_detection ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
+
